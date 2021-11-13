@@ -47,3 +47,6 @@
   Включим фаерволл
 
         sudo ufw enable
+  Смотрим статус
+        
+        sudo ufw status
