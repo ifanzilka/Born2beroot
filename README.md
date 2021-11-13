@@ -6,3 +6,5 @@
     apt install tmux
     
 #### Эта утилита для разбивки консоли
+
+(Шпаргалка)[https://losst.ru/shpargalka-po-tmux]
