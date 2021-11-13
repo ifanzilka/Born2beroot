@@ -7,4 +7,4 @@
     
 #### Эта утилита для разбивки консоли
 
-*[Шпаргалка](https://losst.ru/shpargalka-po-tmux)
+* [Шпаргалка](https://losst.ru/shpargalka-po-tmux)
