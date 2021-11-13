@@ -25,6 +25,8 @@
 
 ## Настройка SSH
 
+ Все настройки тут https://www.aitishnik.ru/linux/ssh-debian/nastroyka-openssh.html
+
 Открываем файл
 
     vim /etc/ssh/sshd_config
