@@ -27,4 +27,4 @@
 
 Открываем файл
 
-    vim /etc/ssh/ssh_config
+    vim /etc/ssh/sshd_config
