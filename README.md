@@ -28,3 +28,9 @@
 Открываем файл
 
     vim /etc/ssh/sshd_config
+Раскоменчиваем 
+        
+        Port 4242
+        PermitRootLogin no        
+
+    
