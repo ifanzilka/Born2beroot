@@ -135,17 +135,17 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
  ## SSH
 
 ### Step 1: Installing & Configuring SSH
-Install *openssh-server* via `sudo apt install openssh-server`.
+Установка *openssh-server* с помощью `sudo apt install openssh-server`.
 ```
 $ sudo apt install openssh-server
 ```
-Verify whether *openssh-server* was successfully installed via `dpkg -l | grep ssh`.
+Проверить что пакеты успешно установились `dpkg -l | grep ssh`.
 ```
 $ dpkg -l | grep ssh
 ```
-Configure SSH via `sudo vi /etc/ssh/sshd_config`.
+Настройка файла конфигурации с помошью `sudo vim /etc/ssh/sshd_config`.
 ```
-$ sudo vi /etc/ssh/sshd_config
+$ sudo vim /etc/ssh/sshd_config
 ```
 To set up SSH using Port 4242, replace below line:
 ```
