@@ -122,7 +122,7 @@ Defaults        logfile="/var/log/sudo/<filename>"
 Defaults        log_input,log_output
 Defaults        iolog_dir="/var/log/sudo"
 ```
-To require *TTY*:
+Требовать *TTY*:
 ```
 Defaults        requiretty
 ```
@@ -130,7 +130,7 @@ To set *sudo* paths to `/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:
 ```
 Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 ```
-
+Еще всякое про sudo https://white55.ru/sudo.html
     
 ## Настройка SSH
 
