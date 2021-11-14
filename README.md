@@ -105,7 +105,7 @@ $ sudo vim /etc/sudoers.d/<filename>
 ```
 Defaults        passwd_tries=3
 ```
-To add a custom error message in the event of an incorrect password:
+Чтобы добавить пользовательское сообщение об ошибке в случае неправильного пароля:
 ```
 Defaults        badpass_message="<custom-error-message>"
 ```
