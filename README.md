@@ -59,6 +59,31 @@ Password:
 # dpkg -l | grep sudo
 ```
 
+### Step 2: Добавление пользователя  to *sudo* Group
+Add user to *sudo* group via `adduser <username> sudo`.
+```
+# adduser <username> sudo
+```
+>Alternatively, add user to *sudo* group via `usermod -aG sudo <username>`.
+>```
+># usermod -aG sudo <username>
+>```
+Verify whether user was successfully added to *sudo* group via `getent group sudo`.
+```
+$ getent group sudo
+```
+`reboot` for changes to take effect, then log in and verify *sudopowers* via `sudo -v`.
+```
+# reboot
+<--->
+Debian GNU/Linux 10 <hostname> tty1
+
+<hostname> login: <username>
+Password: <password>
+<--->
+$ sudo -v
+[sudo] password for <username>: <password>
+```
 
 ## Настройка SSH
 
