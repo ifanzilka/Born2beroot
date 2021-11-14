@@ -92,7 +92,7 @@ $ sudo -v
 $ sudo apt update
 ```
 ### Step 4: Configuring *sudo*
-Настройте  *sudo* через `sudo vim /etc/sudoers.d/<filename>`. `<filename>` е должно заканчиваться на `~` или содержать `.`
+Настройте  *sudo* через `sudo vim /etc/sudoers.d/<filename>`. `<filename>` не должно заканчиваться на `~` или содержать `.`
 ```
 $ sudo vim /etc/sudoers.d/<filename>
 ```
