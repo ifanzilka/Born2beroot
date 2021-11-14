@@ -239,17 +239,17 @@ PASS_WARN_AGE   7
 ```
 
 #### Password Strength
-Secondly, to set up policies in relation to password strength, install the *libpam-pwquality* package.
+Во-вторых, чтобы настроить политики в отношении надежности пароля, установите пакет *libpam-pwquality*.
 ```
 $ sudo apt install libpam-pwquality
 ```
-Verify whether *libpam-pwquality* was successfully installed via `dpkg -l | grep libpam-pwquality`.
+Проверим установку `dpkg -l | grep libpam-pwquality`.
 ```
 $ dpkg -l | grep libpam-pwquality
 ```
-Configure password strength policy via `sudo vi /etc/pam.d/common-password`, specifically the below line:
+Настройте политику защиты пароля с помощью `sudo vim /etc/pam.d/common-password`, в частности, строка ниже:
 ```
-$ sudo vi /etc/pam.d/common-password
+$ sudo vim /etc/pam.d/common-password
 <~~~>
 25 password        requisite                       pam_pwquality.so retry=3
 <~~~>
