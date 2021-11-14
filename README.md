@@ -85,6 +85,14 @@ $ sudo -v
 [sudo] password for <username>: <password>
 ```
 
+### Step 3: Running *root*-Privileged Commands
+From here on out, run *root*-privileged commands via prefix `sudo`. For instance:
+```
+$ sudo apt update
+```
+
+
+    
 ## Настройка SSH
 
  Все настройки тут https://www.aitishnik.ru/linux/ssh-debian/nastroyka-openssh.html
