@@ -110,7 +110,7 @@ Defaults        passwd_tries=3
 Defaults        badpass_message="<custom-error-message>"
 ```
 ###
-To log all *sudo* commands to `/var/log/sudo/<filename>`:
+Для записи логов всех команд *sudo*  `/var/log/sudo/<filename>`:
 ```
 $ sudo mkdir /var/log/sudo
 <~~~>
