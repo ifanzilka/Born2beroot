@@ -219,21 +219,66 @@ $ sudo vim /etc/login.defs
 ```
 Чтобы установить срок действия пароля каждые 30 дней, замените нижеприведенную строку
 ```
-160 PASS_MAX_DAYS   99999
+PASS_MAX_DAYS   99999
 ```
 на:
 ```
-160 PASS_MAX_DAYS   30
+PASS_MAX_DAYS   30
 ```
 Чтобы установить минимальное количество дней между сменой пароля равным 2 дням, замените нижеприведенную строку
 ```
-161 PASS_MIN_DAYS   0
+PASS_MIN_DAYS   0
 ```
 на:
 ```
-161 PASS_MIN_DAYS   2
+PASS_MIN_DAYS   2
 ```
 Чтобы отправить пользователю предупреждающее сообщение за 7 дней * (по умолчанию в любом случае 7)* до истечения срока действия пароля, оставьте нижеприведенную строку как есть.
 ```
-162 PASS_WARN_AGE   7
-```    
+PASS_WARN_AGE   7
+```
+
+#### Password Strength
+Secondly, to set up policies in relation to password strength, install the *libpam-pwquality* package.
+```
+$ sudo apt install libpam-pwquality
+```
+Verify whether *libpam-pwquality* was successfully installed via `dpkg -l | grep libpam-pwquality`.
+```
+$ dpkg -l | grep libpam-pwquality
+```
+Configure password strength policy via `sudo vi /etc/pam.d/common-password`, specifically the below line:
+```
+$ sudo vi /etc/pam.d/common-password
+<~~~>
+25 password        requisite                       pam_pwquality.so retry=3
+<~~~>
+```
+To set password minimum length to 10 characters, add below option to the above line.
+```
+minlen=10
+```
+To require password to contain at least an uppercase character and a numeric character:
+```
+ucredit=-1 dcredit=-1
+```
+To set a maximum of 3 consecutive identical characters:
+```
+maxrepeat=3
+```
+To reject the password if it contains `<username>` in some form:
+```
+reject_username
+```
+To set the number of changes required in the new password from the old password to 7:
+```
+difok=7
+```
+To implement the same policy on *root*:
+```
+enforce_for_root
+```
+Finally, it should look like the below:
+```
+password        requisite                       pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+```
