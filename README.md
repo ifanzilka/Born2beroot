@@ -59,8 +59,8 @@ Password:
 # dpkg -l | grep sudo
 ```
 
-### Step 2: Добавление пользователя  to *sudo* Group
-Add user to *sudo* group via `adduser <username> sudo`.
+### Step 2: Adding User to *sudo* Group
+Добавление пользователя в группу  *sudo* group via `adduser <username> sudo`.
 ```
 # adduser <username> sudo
 ```
