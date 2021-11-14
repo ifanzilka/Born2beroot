@@ -254,31 +254,31 @@ $ sudo vim /etc/pam.d/common-password
 password        requisite                       pam_pwquality.so retry=3
 <~~~>
 ```
-To set password minimum length to 10 characters, add below option to the above line.
+Чтобы установить минимальную длину пароля в 10 символов, добавьте опцию ниже в строку выше.
 ```
 minlen=10
 ```
-To require password to contain at least an uppercase character and a numeric character:
+Требовать, чтобы пароль содержал по крайней мере символ верхнего регистра и числовой символ:
 ```
 ucredit=-1 dcredit=-1
 ```
-To set a maximum of 3 consecutive identical characters:
+Чтобы установить максимум 3 последовательных одинаковых символа:
 ```
 maxrepeat=3
 ```
-To reject the password if it contains `<username>` in some form:
+Чтобы отклонить пароль, если он содержит "<имя пользователя>" в какой-либо форме:
 ```
 reject_username
 ```
-To set the number of changes required in the new password from the old password to 7:
+Чтобы установить количество изменений, необходимых для нового пароля, от старого пароля до 7:
 ```
 difok=7
 ```
-To implement the same policy on *root*:
+Для реализации той же политики в *root*:
 ```
 enforce_for_root
 ```
-Finally, it should look like the below:
+Наконец, это должно выглядеть следующим образом:
 ```
 password        requisite                       pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 ```
