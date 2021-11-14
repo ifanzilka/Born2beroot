@@ -213,27 +213,27 @@ $ logout
 ### Step 1: Setting Up a Strong Password Policy
 
 #### Password Age
-Configure password age policy via `sudo vi /etc/login.defs`.
+Настройте политику возраста пароля с помощью `sudo vim /etc/login.defs`.
 ```
-$ sudo vi /etc/login.defs
+$ sudo vim /etc/login.defs
 ```
-To set password to expire every 30 days, replace below line
+Чтобы установить срок действия пароля каждые 30 дней, замените нижеприведенную строку
 ```
 160 PASS_MAX_DAYS   99999
 ```
-with:
+на:
 ```
 160 PASS_MAX_DAYS   30
 ```
-To set minimum number of days between password changes to 2 days, replace below line
+Чтобы установить минимальное количество дней между сменой пароля равным 2 дням, замените нижеприведенную строку
 ```
 161 PASS_MIN_DAYS   0
 ```
-with:
+на:
 ```
 161 PASS_MIN_DAYS   2
 ```
-To send user a warning message 7 days *(defaults to 7 anyway)* before password expiry, keep below line as is.
+Чтобы отправить пользователю предупреждающее сообщение за 7 дней * (по умолчанию в любом случае 7)* до истечения срока действия пароля, оставьте нижеприведенную строку как есть.
 ```
 162 PASS_WARN_AGE   7
 ```    
