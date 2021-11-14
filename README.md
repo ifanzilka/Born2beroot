@@ -92,6 +92,9 @@ $ sudo -v
 $ sudo apt update
 ```
 ### Step 4: Configuring *sudo*
+    
+Подробней про sudo и su можно почитать тут https://losst.ru/nastrojka-sudo-v-linux    
+    
 Настройте  *sudo* через `sudo vim /etc/sudoers.d/<filename>`. `<filename>` не должно заканчиваться на `~` или содержать `.`
 По этому пути будет файл конфигурации sudo
     
