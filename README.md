@@ -33,7 +33,11 @@
 Раскоменчиваем 
         
         Port 4242
-        PermitRootLogin no        
+        PermitRootLogin no
+Перезапустим ssh
+         
+         /etc/init.d/sshd restart
+         
 Теперь мы можем подключаться вот так
         
         ssh user42@127.0.0.1 -p 4242
