@@ -98,7 +98,7 @@ $ sudo apt update
 ```
 $ sudo vim /etc/sudoers.d/<filename>
 ```
-To limit authentication using *sudo* to 3 attempts *(defaults to 3 anyway)* in the event of an incorrect password, add below line to the file.
+Чтобы ограничить аутентификацию с помощью sudo до 3 попыток (по умолчанию в любом случае 3) в случае неправильного пароля, добавьте в файл строку ниже.
 ```
 Defaults        passwd_tries=3
 ```
