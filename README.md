@@ -207,4 +207,33 @@ $ logout
 >```
 >$ exit
 >```
-   
+
+## User Management
+
+### Step 1: Setting Up a Strong Password Policy
+
+#### Password Age
+Configure password age policy via `sudo vi /etc/login.defs`.
+```
+$ sudo vi /etc/login.defs
+```
+To set password to expire every 30 days, replace below line
+```
+160 PASS_MAX_DAYS   99999
+```
+with:
+```
+160 PASS_MAX_DAYS   30
+```
+To set minimum number of days between password changes to 2 days, replace below line
+```
+161 PASS_MIN_DAYS   0
+```
+with:
+```
+161 PASS_MIN_DAYS   2
+```
+To send user a warning message 7 days *(defaults to 7 anyway)* before password expiry, keep below line as is.
+```
+162 PASS_WARN_AGE   7
+```    
