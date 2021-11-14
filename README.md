@@ -86,7 +86,7 @@ $ sudo -v
 ```
 
 ### Step 3: Running *root*-Privileged Commands
-From here on out, run *root*-privileged commands via prefix `sudo`. For instance:
+С этого момента запускайте *root*-привилегированные команды с помощью префикса `sudo`. Например:
 ```
 $ sudo apt update
 ```
