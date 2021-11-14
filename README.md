@@ -44,17 +44,17 @@
 ## *sudo*
 
 ### Step 1: Installing *sudo*
-Switch to *root* and its environment via `su -`.
+Переключитесь на root и его окружение через  `su -`.
 ```
 $ su -
 Password:
 #
 ```
-Install *sudo* via `apt install sudo`.
+Установка *sudo* via `apt install sudo`.
 ```
 # apt install sudo
 ```
-Verify whether *sudo* was successfully installed via `dpkg -l | grep sudo`.
+Проверка успешной становки судо `dpkg -l | grep sudo`.
 ```
 # dpkg -l | grep sudo
 ```
