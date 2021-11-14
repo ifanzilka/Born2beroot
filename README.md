@@ -68,7 +68,7 @@ Password:
 >```
 ># usermod -aG sudo <username>
 >```
-Verify whether user was successfully added to *sudo* group via `getent group sudo`.
+Проверьте, был ли пользователь успешно добавлен в группу sudo с помощью `getent group sudo`.
 ```
 $ getent group sudo
 ```
