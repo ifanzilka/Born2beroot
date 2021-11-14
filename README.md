@@ -147,97 +147,64 @@ $ dpkg -l | grep ssh
 ```
 $ sudo vim /etc/ssh/sshd_config
 ```
-To set up SSH using Port 4242, replace below line:
+Чтобы настроить SSH с использованием порта 4242, замените нижеприведенную строку:
 ```
 13 #Port 22
 ```
-with:
+на:
 ```
 13 Port 4242
 ```
-To disable SSH login as *root* irregardless of authentication mechanism, replace below line
+Чтобы отключить вход по SSH от имени *root* независимо от механизма аутентификации, замените нижеприведенную строку
 ```
 32 #PermitRootLogin prohibit-password
 ```
-with:
+на:
 ```
 32 PermitRootLogin no
 ```
-Check SSH status via `sudo service ssh status`.
+Проверка ssh `sudo service ssh status`.
 ```
 $ sudo service ssh status
 ```
->Alternatively, check SSH status via `systemctl status ssh`.
+>В качестве альтернативы, проверьте статус SSH через `systemctl status ssh`.
 >```
 >$ systemctl status ssh
 >```
 
 ### Step 2: Installing & Configuring UFW
-Install *ufw* via `sudo apt install ufw`.
+Установка *ufw* c `sudo apt install ufw`.
 ```
 $ sudo apt install ufw
 ```
-Verify whether *ufw* was successfully installed via `dpkg -l | grep ufw`.
+Провкра что пакеты установились `dpkg -l | grep ufw`.
 ```
 $ dpkg -l | grep ufw
 ```
-Enable Firewall via `sudo ufw enable`.
+Включение Firewall с помощью `sudo ufw enable`.
 ```
 $ sudo ufw enable
 ```
-Allow incoming connections using Port 4242 via `sudo ufw allow 4242`.
+Разрешить входящие соединения с использованием порта 4242 через `sudo ufw allow 4242`.
 ```
 $ sudo ufw allow 4242
 ```
-Check UFW status via `sudo ufw status`.
+Проверка UFW status с помощью `sudo ufw status`.
 ```
 $ sudo ufw status
 ```
 
 ### Step 3: Connecting to Server via SSH
-SSH into your virtual machine using Port 4242 via `ssh <username>@<ip-address> -p 4242`.
+SSH в вашу виртуальную машину с помощью порта 4242 через `ssh <username>@<ip-address> -p 4242`.
 ```
 $ ssh <username>@<ip-address> -p 4242
 ```
-Terminate SSH session at any time via `logout`.
+Завершите сеанс SSH в любое время с помощью `logout`.
 ```
 $ logout
 ```
->Alternatively, terminate SSH session via `exit`.
+>В качестве альтернативы, завершите сеанс SSH с помощью `exit`.
 >```
 >$ exit
 >```
    
-    
- 
-## Настройка SSH
-
- Все настройки тут https://www.aitishnik.ru/linux/ssh-debian/nastroyka-openssh.html
-
-Открываем файл
-
-    vim /etc/ssh/sshd_config
-Раскоменчиваем 
-        
-        Port 4242
-        PermitRootLogin no
-Перезапустим ssh
-         
-         /etc/init.d/sshd restart
-         
-Теперь мы можем подключаться вот так
-        
-        ssh user42@127.0.0.1 -p 4242
-## Теперь настроим Firewall чтобы был открыть только порт 4242
-Скачаем для начала утилиту
-        
-        sudo apt install ufw
- Откроем порт 4242
-        
-        sudo ufw allow 4242/tcp
-  Включим фаерволл
-
-        sudo ufw enable
-  Смотрим статус
-        
-        sudo ufw status
