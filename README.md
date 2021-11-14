@@ -18,9 +18,10 @@
     - [Step 2: Creating a New User](#step-2-creating-a-new-user)
     - [Step 3: Creating a New Group](#step-3-creating-a-new-group)
 
-#### Для начала  также установим tmux
+#### Для начала  также установим tmux и vim
 
     apt install tmux
+    apt install vim
     
 #### Эта утилита для разбивки консоли
 
@@ -91,9 +92,9 @@ $ sudo -v
 $ sudo apt update
 ```
 ### Step 4: Configuring *sudo*
-Configure *sudo* via `sudo vi /etc/sudoers.d/<filename>`. `<filename>` shall not end in `~` or contain `.`.
+Настройте  *sudo* через `sudo vim /etc/sudoers.d/<filename>`. `<filename>` е должно заканчиваться на `~` или содержать `.`
 ```
-$ sudo vi /etc/sudoers.d/<filename>
+$ sudo vim /etc/sudoers.d/<filename>
 ```
 To limit authentication using *sudo* to 3 attempts *(defaults to 3 anyway)* in the event of an incorrect password, add below line to the file.
 ```
