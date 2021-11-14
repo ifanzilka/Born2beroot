@@ -251,7 +251,7 @@ $ dpkg -l | grep libpam-pwquality
 ```
 $ sudo vim /etc/pam.d/common-password
 <~~~>
-25 password        requisite                       pam_pwquality.so retry=3
+password        requisite                       pam_pwquality.so retry=3
 <~~~>
 ```
 To set password minimum length to 10 characters, add below option to the above line.
