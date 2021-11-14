@@ -132,6 +132,84 @@ Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/
 ```
 Еще всякое про sudo https://white55.ru/sudo.html
     
+ ## SSH
+
+### Step 1: Installing & Configuring SSH
+Install *openssh-server* via `sudo apt install openssh-server`.
+```
+$ sudo apt install openssh-server
+```
+Verify whether *openssh-server* was successfully installed via `dpkg -l | grep ssh`.
+```
+$ dpkg -l | grep ssh
+```
+Configure SSH via `sudo vi /etc/ssh/sshd_config`.
+```
+$ sudo vi /etc/ssh/sshd_config
+```
+To set up SSH using Port 4242, replace below line:
+```
+13 #Port 22
+```
+with:
+```
+13 Port 4242
+```
+To disable SSH login as *root* irregardless of authentication mechanism, replace below line
+```
+32 #PermitRootLogin prohibit-password
+```
+with:
+```
+32 PermitRootLogin no
+```
+Check SSH status via `sudo service ssh status`.
+```
+$ sudo service ssh status
+```
+>Alternatively, check SSH status via `systemctl status ssh`.
+>```
+>$ systemctl status ssh
+>```
+
+### Step 2: Installing & Configuring UFW
+Install *ufw* via `sudo apt install ufw`.
+```
+$ sudo apt install ufw
+```
+Verify whether *ufw* was successfully installed via `dpkg -l | grep ufw`.
+```
+$ dpkg -l | grep ufw
+```
+Enable Firewall via `sudo ufw enable`.
+```
+$ sudo ufw enable
+```
+Allow incoming connections using Port 4242 via `sudo ufw allow 4242`.
+```
+$ sudo ufw allow 4242
+```
+Check UFW status via `sudo ufw status`.
+```
+$ sudo ufw status
+```
+
+### Step 3: Connecting to Server via SSH
+SSH into your virtual machine using Port 4242 via `ssh <username>@<ip-address> -p 4242`.
+```
+$ ssh <username>@<ip-address> -p 4242
+```
+Terminate SSH session at any time via `logout`.
+```
+$ logout
+```
+>Alternatively, terminate SSH session via `exit`.
+>```
+>$ exit
+>```
+   
+    
+ 
 ## Настройка SSH
 
  Все настройки тут https://www.aitishnik.ru/linux/ssh-debian/nastroyka-openssh.html
