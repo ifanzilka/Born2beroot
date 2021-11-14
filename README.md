@@ -64,7 +64,7 @@ Password:
 ```
 # adduser <username> sudo
 ```
->Alternatively, add user to *sudo* group via `usermod -aG sudo <username>`.
+>Альтернативный способ `usermod -aG sudo <username>`.
 >```
 ># usermod -aG sudo <username>
 >```
