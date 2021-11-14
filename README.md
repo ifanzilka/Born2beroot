@@ -117,7 +117,7 @@ $ sudo mkdir /var/log/sudo
 Defaults        logfile="/var/log/sudo/<filename>"
 <~~~>
 ```
-To archive all *sudo* inputs & outputs to `/var/log/sudo/`:
+Для архивирования всех входов и выходов *sudo* в `/var/log/sudo/`:
 ```
 Defaults        log_input,log_output
 Defaults        iolog_dir="/var/log/sudo"
