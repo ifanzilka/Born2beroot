@@ -282,3 +282,23 @@ enforce_for_root
 ```
 password        requisite                       pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 ```
+### Step 2: Creating a New User
+Create new user via `sudo adduser <username>`.
+```
+$ sudo adduser <username>
+```
+Verify whether user was successfully created via `getent passwd <username>`.
+```
+$ getent passwd <username>
+```
+Verify newly-created user's password expiry information via `sudo chage -l <username>`.
+```
+$ sudo chage -l <username>
+Last password change					: <last-password-change-date>
+Password expires					: <last-password-change-date + PASS_MAX_DAYS>
+Password inactive					: never
+Account expires						: never
+Minimum number of days between password change		: <PASS_MIN_DAYS>
+Maximum number of days between password change		: <PASS_MAX_DAYS>
+Number of days of warning before password expires	: <PASS_WARN_AGE>
+```
