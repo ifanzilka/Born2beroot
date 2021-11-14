@@ -72,7 +72,7 @@ Password:
 ```
 $ getent group sudo
 ```
-`reboot` for changes to take effect, then log in and verify *sudopowers* via `sudo -v`.
+`reboot` чтобы изменения вступили в силу, затем войдите в систему и подтвердите полномочия sudo через sudo-v.
 ```
 # reboot
 <--->
