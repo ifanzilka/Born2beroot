@@ -170,6 +170,7 @@ $ sudo service ssh status
 >В качестве альтернативы, проверьте статус SSH через `systemctl status ssh`.
 >```
 >$ systemctl status ssh
+    ssh bmarilli@127.0.0.1 -p 4242
 >```
 
 ### Step 2: Installing & Configuring UFW
