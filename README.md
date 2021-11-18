@@ -353,7 +353,7 @@ $ cat /proc/loadavg  | awk '{ printf "%.1f%%" , $1}'
 ```
 7.The date and time of the last reboot.
 ```
-$ uname -a
+$ who -b | awk '{print $3 " " $4}'
 ```
 8.Whether LVM is active or not.
 ```
