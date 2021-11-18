@@ -17,6 +17,12 @@
        - [Password Strength](#password-strength)
     - [Step 2: Creating a New User](#step-2-creating-a-new-user)
     - [Step 3: Creating a New Group](#step-3-creating-a-new-group)
+5. [Script-monitoring](#Script-monitoring)
+    - [Step 1: Setting Up a Strong Password Policy](#step-1-setting-up-a-strong-password-policy)
+       - [Password Age](#password-age)
+       - [Password Strength](#password-strength)
+    - [Step 2: Creating a New User](#step-2-creating-a-new-user)
+    - [Step 3: Creating a New Group](#step-3-creating-a-new-group)
 
 #### Для начала  также установим tmux и vim
 
@@ -322,5 +328,5 @@ $ sudo adduser <username> user42
 ```
 $ getent group user42
 ```
-## *cron*
+## *Script-monitoring*
 
