@@ -330,8 +330,9 @@ $ getent group user42
 $ uname -a
 ```
 2.The number of physical processors.
+nproc - максимальное число процессов
 ```
-$ uname -a
+$ nproc
 ```
 3.The number of virtual processors
 ```
