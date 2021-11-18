@@ -344,7 +344,8 @@ $ free -m | grep Mem | awk ' {printf "%d/%dMB (%.2f%%)\n",$3,$2, $3*100/$2} '
 ```
 5.The current available memory on your server and its utilization rate as a percentage
 ```
-$ uname -a
+$ df -k | grep root | awk '{ printf "%d",$3 / 1024} '
+$ df -h | grep root | awk '{ printf "/%s (%s)\n",$2, $5} '    
 ```
 6.The current utilization rate of your processors as a percentage.
 ```
