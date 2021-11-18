@@ -349,7 +349,7 @@ $ df -h | grep root | awk '{ printf "/%s (%s)\n",$2, $5} '
 ```
 6.The current utilization rate of your processors as a percentage.
 ```
-$ uname -a
+$ cat /proc/loadavg  | awk '{ printf "%.1f%%" , $1}'
 ```
 7.The date and time of the last reboot.
 ```
