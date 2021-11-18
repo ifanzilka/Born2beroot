@@ -340,7 +340,7 @@ $ cat /proc/cpuinfo | grep processor | wc -l
 ```
 4.The current available RAM on your server and its utilization rate as a percentage.
 ```
-$ uname -a
+$ free -m | grep Mem | awk ' {printf "%d/%dMB (%.2f%%)\n",$3,$2, $3*100/$2} '
 ```
 5.The current available memory on your server and its utilization rate as a percentage
 ```
