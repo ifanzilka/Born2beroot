@@ -336,7 +336,7 @@ $ nproc
 ```
 3.The number of virtual processors
 ```
-$ uname -a
+$ cat /proc/cpuinfo | grep processor | wc -l
 ```
 4.The current available RAM on your server and its utilization rate as a percentage.
 ```
