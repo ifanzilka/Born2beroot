@@ -325,7 +325,51 @@ $ sudo adduser <username> user42
 $ getent group user42
 ```
 ## *Script-monitoring*
-1.Вывод название системы
+1.Вывод название системы(The architecture of your operating system and its kernel version.)
+```
+$ uname -a
+```
+2.The number of physical processors.
+```
+$ uname -a
+```
+3.The number of virtual processors
+```
+$ uname -a
+```
+4.The current available RAM on your server and its utilization rate as a percentage.
+```
+$ uname -a
+```
+5.The current available memory on your server and its utilization rate as a percentage
+```
+$ uname -a
+```
+6.The current utilization rate of your processors as a percentage.
+```
+$ uname -a
+```
+7.The date and time of the last reboot.
+```
+$ uname -a
+```
+8.Whether LVM is active or not.
+```
+$ uname -a
+```
+9.• The number of active connections.
+```
+$ uname -a
+```
+10.The number of users using the server.
+```
+$ uname -a
+```
+11.The IPv4 address of your server and its MAC (Media Access Control) address
+```
+$ uname -a
+```
+12.The number of commands executed with the sudo program.
 ```
 $ uname -a
 ```
