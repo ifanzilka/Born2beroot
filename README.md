@@ -18,7 +18,17 @@
     - [Step 2: Creating a New User](#step-2-creating-a-new-user)
     - [Step 3: Creating a New Group](#step-3-creating-a-new-group)
 5. [Script-monitoring](#Script-monitoring)
-
+6. [Bonus](#bonus)
+    - [Installation](#1-installation)
+    - [Linux Lighttpd MariaDB PHP *(LLMP)* Stack](#2-linux-lighttpd-mariadb-php-llmp-stack)
+       - [Step 1: Installing Lighttpd](#step-1-installing-lighttpd)
+       - [Step 2: Installing & Configuring MariaDB](#step-2-installing--configuring-mariadb)
+       - [Step 3: Installing PHP](#step-3-installing-php)
+       - [Step 4: Downloading & Configuring WordPress](#step-4-downloading--configuring-wordpress)
+       - [Step 5: Configuring Lighttpd](#step-5-configuring-lighttpd)
+    - [File Transfer Protocol *(FTP)*](#3-file-transfer-protocol-ftp)
+       - [Step 1: Installing & Configuring FTP](#step-1-installing--configuring-ftp)
+       - [Step 2: Connecting to Server via FTP](#step-2-connecting-to-server-via-ftp)
 
 #### Для начала  также установим tmux и vim
 
@@ -393,3 +403,26 @@ sudo crontab -u root -e
 ```
 $ sudo crontab -u root -l
 ```
+## Bonus
+
+### #1: Installation
+Watch *bonus* installation walkthrough *(no audio)* [here](https://youtu.be/2w-2MX5QrQw).
+
+### #2: Linux Lighttpd MariaDB PHP *(LLMP)* Stack
+
+#### Step 1: Installing Lighttpd
+Установка lighttpd (веб сервер)
+```
+$ sudo apt install lighttpd
+```
+Проверим то что все хорошо установилось
+```
+$ dpkg -l | grep lighttpd
+```
+Разрешить входящие соединения с использованием порта 80
+```
+$ sudo ufw allow 80
+```
+
+
+    
