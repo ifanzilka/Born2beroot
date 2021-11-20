@@ -361,11 +361,11 @@ $ lsblk | grep lvm  > /dev/null ; echo $? | awk ' {if ($1 == "0") print "yes"; e
 ```
 9.• The number of active connections.
 ```
-$ netstat -an | grep ESTABLISHED | wc -l
+$ sudo apt install net-tools
 ```
 10.The number of users using the server.
 ```
-$ uname -a
+$ who | wc -l
 ```
 11.The IPv4 address of your server and its MAC (Media Access Control) address
 ```
