@@ -547,5 +547,62 @@ $ sudo lighty-enable-mod fastcgi
 $ sudo lighty-enable-mod fastcgi-php
 $ sudo service lighttpd force-reload
 ```
+### #3: File Transfer Protocol *(FTP)*
+
+#### Step 1: Installing & Configuring FTP
+
+Установка FTP(FTP (File Transfer Protocol - протокол передачи файлов) - это популярный сетевой протокол, который используется для копирования файлов с одного компьютера на другой в локальной сети, либо в сети Интернет. FTP является одним из старейших прикладных протоколов, появившимся задолго до HTTP, и даже до TCP/IP, в 1971 году.)
+    
+```
+$ sudo apt install vsftpd
+```
+Проверим
+```
+$ dpkg -l | grep vsftpd
+```
+Разрешить входящие соединения с использованием порта 21
+```
+$ sudo ufw allow 21
+```
+Настроим FTP
+```
+$ sudo vim /etc/vsftpd.conf
+```
+Чтобы включить любую форму команды записи FTP, раскомментируйте строку ниже:
+```
+31 #write_enable=YES
+```
+Чтобы установить корневую папку для пользователя, подключенного по FTP, в `/home/<username>/ftp`, добавьте нижеприведенные строки:
+```
+$ sudo mkdir /home/<username>/ftp
+$ sudo mkdir /home/<username>/ftp/files
+$ sudo chown nobody:nogroup /home/<username>/ftp
+$ sudo chmod a-w /home/<username>/ftp
+<~~~>
+user_sub_token=$USER
+local_root=/home/$USER/ftp
+<~~~>
+```
+Чтобы запретить пользователю доступ к файлам или использование команд за пределами дерева каталогов, раскомментируйте строку ниже:
+```
+114 #chroot_local_user=YES
+```
+To whitelist FTP, add below lines:
+```
+$ sudo vi /etc/vsftpd.userlist
+$ echo <username> | sudo tee -a /etc/vsftpd.userlist
+<~~~>
+userlist_enable=YES
+userlist_file=/etc/vsftpd.userlist
+userlist_deny=NO
+<~~~>
+```
+
+#### Step 2: Connecting to Server via FTP
+FTP в вашу виртуальную машину 
+```
+$ ftp <ip-address>
+```
+Terminate FTP session at any time via `CTRL + D`.
 
     
