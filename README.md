@@ -540,6 +540,12 @@ $ sudo vim /var/www/html/wp-config.php
 26 define( 'DB_USER', '<username-2>' );^M
 29 define( 'DB_PASSWORD', '<password-2>' );^M
 ```
-
+#### Step 5: Configuring Lighttpd
+Включите нижеприведенные модули с помощью "sudo lighty-включить-мод fastcgi; sudo lighty-включить-мод fastcgi-php; служба sudo lighttpd принудительно перезагрузить".
+```
+$ sudo lighty-enable-mod fastcgi
+$ sudo lighty-enable-mod fastcgi-php
+$ sudo service lighttpd force-reload
+```
 
     
