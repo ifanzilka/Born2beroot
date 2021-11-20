@@ -369,7 +369,8 @@ $ who | wc -l
 ```
 11.The IPv4 address of your server and its MAC (Media Access Control) address
 ```
-$ uname -a
+$ hostname -I
+$ ip a | grep link/ether | awk '{print $2}'
 ```
 12.The number of commands executed with the sudo program.
 ```
