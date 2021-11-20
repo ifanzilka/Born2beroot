@@ -377,3 +377,14 @@ $ ip a | grep link/ether | awk '{print $2}'
 ```
 $ sudo cat sudo/sudo.log | grep COMMAND | wc -l
 ```
+
+12.Cron
+```
+sudo crontab -u root -e
+``` 
+Чтобы запланировать запуск сценария оболочки каждые 10 минут, замените нижеприведенную строку
+```
+ # m h  dom mon dow   command
+ */10 * * * *         bash /home/bmarilli/monitoring.sh
+```
+    
