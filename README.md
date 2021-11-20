@@ -357,7 +357,7 @@ $ who -b | awk '{print $3 " " $4}'
 ```
 8.Whether LVM is active or not.
 ```
-$ uname -a
+$ lsblk | grep lvm  > /dev/null ; echo $? | awk ' {if ($1 == "0") print "yes"; else print "no"}'
 ```
 9.• The number of active connections.
 ```
