@@ -196,7 +196,7 @@ $ sudo ufw allow 4242
 ```
 $ sudo ufw status
 ```
-
+*[Почитать еще](https://1cloud.ru/help/security/ispolzovanie-utility-ufw-na-inux)
 ### Step 3: Connecting to Server via SSH
 SSH в вашу виртуальную машину с помощью порта 4242 через `ssh <username>@<ip-address> -p 4242`.
 ```
