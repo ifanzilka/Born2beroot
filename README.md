@@ -485,6 +485,61 @@ MariaDB [(none)]> SHOW DATABASES;
 ```
 MariaDB [(none)]> exit
 ```
+#### Step 3: Installing PHP
+Install *php-cgi* & *php-mysql* via `sudo apt install php-cgi php-mysql`.
+```
+$ sudo apt install php-cgi php-mysql
+```
+Verify whether *php-cgi* & *php-mysql* was successfully installed via `dpkg -l | grep php`.
+```
+$ dpkg -l | grep php
+```
+
+#### Step 4: Downloading & Configuring WordPress
+Установим wget (Wget — (GNU Wget) свободная неинтерактивная консольная программа для загрузки файлов по сети. Поддерживает протоколы HTTP, FTP и HTTPS)
+```
+$ sudo apt install wget
+```
+Установим вордпресс в `/var/www/html` с `sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html`.
+```
+$ sudo wget http://wordpress.org/latest.tar.gz -P /var/www/html
+```
+Извлекать загруженный контент с помощью `sudo tar -xzvf /var/www/html/latest.tar.gz`.
+```
+$ sudo tar -xzvf /var/www/html/latest.tar.gz
+```
+Удалите архив с помощью `sudo rm /var/www/html/latest.tar.gz`.
+```
+$ sudo rm /var/www/html/latest.tar.gz
+```
+Копируем контент `/var/www/html/wordpress` в `/var/www/html` с помошью `sudo cp -r /var/www/html/wordpress/* /var/www/html`.
+```
+$ sudo cp -r /var/www/html/wordpress/* /var/www/html
+```
+Удаляем  `/var/www/html/wordpress` с помошью `sudo rm -rf /var/www/html/wordpress`
+```
+$ sudo rm -rf /var/www/html/wordpress
+```
+Создайте файл конфигурации WordPress из его образца с помощью `sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php`.
+```
+$ sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+```
+Настройте WordPress для ссылки на ранее созданную базу данных MariaDB и пользователя через `sudo vi /var/www/html/wp-config.php`.
+```
+$ sudo vi /var/www/html/wp-config.php
+```
+Замените нижеприведенное
+```
+23 define( 'DB_NAME', 'database_name_here' );^M
+26 define( 'DB_USER', 'username_here' );^M
+29 define( 'DB_PASSWORD', 'password_here' );^M
+```
+на:
+```
+23 define( 'DB_NAME', '<database-name>' );^M
+26 define( 'DB_USER', '<username-2>' );^M
+29 define( 'DB_PASSWORD', '<password-2>' );^M
+```
 
 
     
