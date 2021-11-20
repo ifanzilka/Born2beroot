@@ -442,12 +442,12 @@ Disallow root login remotely? [Y/n] Y
 Remove test database and access to it? [Y/n] Y
 Reload privilege tables now? [Y/n] Y
 ```
-Log in to the MariaDB console via `sudo mariadb`.
+Заходим в мариадб
 ```
 $ sudo mariadb
 MariaDB [(none)]>
 ```
-Create new database via `CREATE DATABASE <database-name>;`.
+Создаем базу данных
 ```
 MariaDB [(none)]> CREATE DATABASE <database-name>;
 ```
