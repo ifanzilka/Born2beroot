@@ -388,3 +388,8 @@ sudo crontab -u root -e
  */10 * * * *         bash /home/bmarilli/monitoring.sh
 ```
     
+Проверьте запланированные задания cron root с помощью
+    
+```
+$ sudo crontab -u root -l
+```
