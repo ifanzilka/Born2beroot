@@ -361,7 +361,7 @@ $ lsblk | grep lvm  > /dev/null ; echo $? | awk ' {if ($1 == "0") print "yes"; e
 ```
 9.• The number of active connections.
 ```
-$ uname -a
+$ netstat -an | grep ESTABLISHED | wc -l
 ```
 10.The number of users using the server.
 ```
