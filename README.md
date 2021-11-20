@@ -374,5 +374,5 @@ $ ip a | grep link/ether | awk '{print $2}'
 ```
 12.The number of commands executed with the sudo program.
 ```
-$ uname -a
+$ sudo cat sudo/sudo.log | grep COMMAND | wc -l
 ```
