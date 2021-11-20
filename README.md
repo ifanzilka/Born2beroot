@@ -526,7 +526,7 @@ $ sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
 ```
 Настройте WordPress для ссылки на ранее созданную базу данных MariaDB и пользователя через `sudo vi /var/www/html/wp-config.php`.
 ```
-$ sudo vi /var/www/html/wp-config.php
+$ sudo vim /var/www/html/wp-config.php
 ```
 Замените нижеприведенное
 ```
