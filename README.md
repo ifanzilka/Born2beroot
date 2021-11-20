@@ -450,10 +450,12 @@ MariaDB [(none)]>
 Создаем базу данных
 ```
 MariaDB [(none)]> CREATE DATABASE <database-name>;
+MariaDB [(none)]> CREATE DATABASE ifanzilka;
 ```
 Создайте нового пользователя базы данных и предоставьте ему полные права доступа к вновь созданной базе данных с помощью
 ```
 MariaDB [(none)]> GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
+MariaDB [(none)]> GRANT ALL ON ifanzilka.*TO 'ifanzilka'@'localhost' IDENTIFIED BY 89639019932 WITH GRANT OPTION;
 ```
 Сбросьте привилегии с помощью
 ```
