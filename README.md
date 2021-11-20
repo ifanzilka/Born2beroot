@@ -605,4 +605,51 @@ $ ftp <ip-address>
 ```
 Terminate FTP session at any time via `CTRL + D`.
 
-    
+## Difference Between CentOS and Debian
+
+CentOS vs Debian are two flavors of Linux operating systems. CentOS, as said above, is a Linux distribution. It is free and open-source. It is enterprise-class – industries can use meaning for server building; it is supported by a large community and is functionally supported by its upstream source, Red Hat Enterprise Linux. Debian is a Unix like computer operating system that is made up of open source components. It is built and supported by a group of individuals who are under the Debian project.
+
+Debian uses Linux as its Kernel. Fedora, CentOS, Oracle Linux are all different distribution from Red Hat Linux and are variant of RedHat Linux. Ubuntu, Kali, etc., are variant of Debian. CentOS vs Debian both are used as internet servers or web servers like web, email, FTP, etc.
+
+## Difference between APT and Aptitude
+
+Besides the main difference being that Aptitude is a high level package manager while APT is a lower level package manager that can be used by other higher level package managers, the other main strengths that separate these two package managers are:
+
+Aptitude is more feature-rich than apt-get and incorporates functionality from apt-get and its other variants, including apt-mark and apt-cache.
+While apt-get handles all package installation, upgrading, system upgrading, package purging, dependency resolution, etc., Aptitude handles a lot more things than apt, including including apt-mark and apt-cache functionality, i.e. finding a package in the list of installed packages, marking a package to be installed automatically or manually, containing a package making it unavailable for upgrading, etc.
+
+## What is SELinux ?
+
+SELinux (Security-Enhanced Linux) is a security architecture for Linux® systems that allows administrators to better control access to the system. This architecture was originally designed by the NSA, the national security agency of the United States, as a series of fixes for the Linux kernel based on the LSM (Linux Security Modules) framework.
+
+## What is AppArmor ?
+
+AppArmor (Application Armor) is a security software for Linux systems made under GNU General Public License.
+
+AppArmor allows the system admin to associate to each program a security profile which limits its' accesses to the operating system. It completes Unix's traditional way of Discretionary access control (DAC) by allowing the use of Mandatory access control (MAC).
+
+### How to create a New User ?
+
+Create new user via `sudo adduser <username>`.
+
+	$>sudo adduser <username>
+
+Verify whether user was successfully created via `getent passwd <username>`.
+
+	$>getent passwd <username>
+
+Verify newly-created user's password expiry information via `sudo chage -l <username>`.
+
+	$ sudo chage -l <username>
+	Last password change					: <last-password-change-date>
+	Password expires					: <last-password-change-date + PASS_MAX_DAYS>
+	Password inactive					: never
+	Account expires						: never
+	Minimum number of days between password change		: <PASS_MIN_DAYS>
+	Maximum number of days between password change		: <PASS_MAX_DAYS>
+	Number of days of warning before password expires	: <PASS_WARN_AGE>
+
+At least for delete user via `sudo userdel <username>`.
+
+	$>sudo userdel <username>
+
