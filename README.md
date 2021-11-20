@@ -455,21 +455,21 @@ MariaDB [(none)]> CREATE DATABASE <database-name>;
 ```
 MariaDB [(none)]> GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
 ```
-Flush the privileges via `FLUSH PRIVILEGES;`.
+Сбросьте привилегии с помощью
 ```
 MariaDB [(none)]> FLUSH PRIVILEGES;
 ```
-Exit the MariaDB shell via `exit`.
+Выходим из мариадб
 ```
 MariaDB [(none)]> exit
 ```
-Verify whether database user was successfully created by logging in to the MariaDB console via `mariadb -u <username-2> -p`.
+Проверьте, был ли успешно создан пользователь базы данных, войдя в консоль MariaDB с помощью 
 ```
 $ mariadb -u <username-2> -p
 Enter password: <password-2>
 MariaDB [(none)]>
 ```
-Confirm whether database user has access to the database via `SHOW DATABASES;`.
+Подтвердите, имеет ли пользователь базы данных доступ к базе данных с помощью
 ```
 MariaDB [(none)]> SHOW DATABASES;
 +--------------------+
@@ -479,7 +479,7 @@ MariaDB [(none)]> SHOW DATABASES;
 | information_schema |
 +--------------------+
 ```
-Exit the MariaDB shell via `exit`.
+Выходи в шелл
 ```
 MariaDB [(none)]> exit
 ```
