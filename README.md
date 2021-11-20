@@ -451,7 +451,7 @@ MariaDB [(none)]>
 ```
 MariaDB [(none)]> CREATE DATABASE <database-name>;
 ```
-Create new database user and grant them full privileges on the newly-created database via `GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;`.
+Создайте нового пользователя базы данных и предоставьте ему полные права доступа к вновь созданной базе данных с помощью
 ```
 MariaDB [(none)]> GRANT ALL ON <database-name>.* TO '<username-2>'@'localhost' IDENTIFIED BY '<password-2>' WITH GRANT OPTION;
 ```
