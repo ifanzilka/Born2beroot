@@ -1,7 +1,7 @@
 #! /bin/bash
 wall $'#Architecture: ' `uname -a` \
-$'\n#CPU physical: ' `nproc` \
-$'\n#vCPU: ' `cat /proc/cpuinfo | grep processor | wc -l`\
+$'\n#CPU physical: ' `cat /proc/cpuinfo | grep "physical id" | sort | uniq | wc -l` \
+$'\n#vCPU: ' `nproc`\
 $'\n#Memory Usage: ' `free -m | grep Mem | awk ' {printf "%d/%dMB (%.2f%%)\n",$3,$2, $3*100/$2} '` \
 $'\n#Disk Usage: ' `df -k | grep root | awk '{ printf "%d",$3 / 1024} '``df -h | grep root | awk '{ printf "/%s (%s)\n",$2, $5} '`\
 $'\n#CPU Load: ' `cat /proc/loadavg  | awk '{ printf "%.1f%%" , $1}'`\
