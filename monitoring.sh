@@ -10,4 +10,4 @@ $'\n#LVM use: ' `lsblk | grep lvm  > /dev/null ; echo $? | awk ' {if ($1 == "0")
 $'\n#Connection TCP: ' ` netstat -an | grep ESTABLISHED | wc -l` "ESTABLISHED"\
 $'\n#User log: ' `who | wc -l`\
 $'\n#Network: IP ' `hostname -I` " ("`ip a | grep link/ether | awk '{print $2}'`")" \
-$'\n#Sudo: ' `cat sudo/sudo.log | grep COMMAND | wc -l`
+$'\n#Sudo: ' `sudo cat /var/log/sudo/logs_sudo | grep COMMAND | wc -l`
